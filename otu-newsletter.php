@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: OTU newsletter
- * Plugin URI: http://www.cbdweb.net
+ * Plugin URI: http://nikdow.net
  * Description: Send email to paid and unpaid members
- * Version: 1.0
- * Author: Nik Dow, CBDWeb
+ * Version: 1.1
+ * Author: Nik Dow
  * License: GPL2
  */
 require_once plugin_dir_path ( __FILE__ ) . 'options.php';
@@ -446,7 +446,7 @@ function save_cbdweb_newsletter(){
             foreach ( $sendTo as $one ) {
                 $email = $one->email;
                 error_log('email = ' . $email);
-                if ( $testing ) $email = "nik@cbdweb.net";
+                if ( $testing ) $email = "nik@nikdow.net";
                 if( ! $email ) continue;
                 if ( $testing ) $subject .= " - " . $one->email;
                 error_log('subject = ' . $subject);
