@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../configs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../getfile" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../otu-members" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../themes/communitycenter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../themes/otu-theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../themes/otu-theme/ngDialog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/bikefun-events" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/bikefun-newsletters" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/bikefun-subscribers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/documentation-suburbia-child" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/fs-signatures" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/getmeeting" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/skilodge-sidebar-login" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/spelfabet-copyright" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/spelfabet-decody" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/plugins/wp-external-auth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/bikefun-twentythirteen-child" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/documentation-suburbia-child" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/sailing-child" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/simpleblock" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/simpleblock-spelfabet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/spelfabet-2024" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/spelfabet-copyright" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/trapdoor-supernews-child" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../spelfabet.wordpress/themes/wp-external-auth" vcs="Git" />
   </component>
 </project>
