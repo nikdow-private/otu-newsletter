@@ -443,16 +443,18 @@ function save_cbdweb_newsletter(){
             $headers[] = "Content-type: text/html";
             $message = $post->post_content;
             try {
+              $i = 0;
               foreach ($sendTo as $one) {
+                $i++;
                 $email = $one->email;
                 error_log('email = ' . $email);
-                update_post_meta($post->ID, $email, 'sent');
+                update_post_meta($post->ID, $email, $i);
                 if ($testing) $email = "nik@nikdow.net";
                 if (!$email) continue;
                 if ($testing) $subject .= " - " . $one->email;
                 error_log('subject = ' . $subject);
                 wp_mail($email, $subject, $message, $headers);
-                if ($testing && $count > 15) break;
+ //               if ($testing && $count > 15) break;
               }
             } catch (Exception $e) {
               update_post_meta($post->ID, 'error', $e->getMessage());
