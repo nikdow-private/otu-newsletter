@@ -305,9 +305,7 @@ function cbdweb_newsletter_meta() {
 add_action ('save_post', 'save_cbdweb_newsletter');
  
 function save_cbdweb_newsletter(){
-  error_log('save_cbdweb_newsletter');
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
-    error_log('save_cbdweb_newsletter 2');
     global $post;
     
     if( array_key_exists('post_type', $_POST) && 'cbdweb_newsletter' === $_POST['post_type']??'' ) {
@@ -447,6 +445,7 @@ function save_cbdweb_newsletter(){
             foreach ( $sendTo as $one ) {
                 $email = $one->email;
                 error_log('email = ' . $email);
+              update_post_meta($post->ID, $email, 'sent' );
                 if ( $testing ) $email = "nik@nikdow.net";
                 if( ! $email ) continue;
                 if ( $testing ) $subject .= " - " . $one->email;
