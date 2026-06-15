@@ -453,7 +453,8 @@ function save_cbdweb_newsletter(){
                 if (!$email) continue;
                 if ($testing) $subject .= " - " . $one->email;
                 error_log('subject = ' . $subject);
-                wp_mail($email, $subject, $message, $headers);
+                $bool = wp_mail($email, $subject, $message, $headers);
+                update_post_meta($post->ID, "wp_mail", json_encode($bool) );
  //               if ($testing && $count > 15) break;
               }
             } catch (Exception $e) {
