@@ -442,16 +442,20 @@ function save_cbdweb_newsletter(){
             $headers[] = 'From: ' . get_option('cbdweb-newsletter-sender-name') . " <" . get_option('cbdweb-newsletter-sender-address') . '>';
             $headers[] = "Content-type: text/html";
             $message = $post->post_content;
-            foreach ( $sendTo as $one ) {
+            try {
+              foreach ($sendTo as $one) {
                 $email = $one->email;
                 error_log('email = ' . $email);
-              update_post_meta($post->ID, $email, 'sent' );
-                if ( $testing ) $email = "nik@nikdow.net";
-                if( ! $email ) continue;
-                if ( $testing ) $subject .= " - " . $one->email;
+                update_post_meta($post->ID, $email, 'sent');
+                if ($testing) $email = "nik@nikdow.net";
+                if (!$email) continue;
+                if ($testing) $subject .= " - " . $one->email;
                 error_log('subject = ' . $subject);
-                wp_mail( $email, $subject, $message, $headers );
-                if ( $testing && $count > 15 ) break;
+                wp_mail($email, $subject, $message, $headers);
+                if ($testing && $count > 15) break;
+              }
+            } catch (Exception $e) {
+              update_post_meta($post->ID, 'error', $e->getMessage());
             }
         }
     }
